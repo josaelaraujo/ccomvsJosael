@@ -1,0 +1,885 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 0.2s ease;
+}
+
+html{
+    font-family: "Montserrat", sans-serif;
+    background: radial-gradient(
+    circle at center,
+    #ffffff 0%,
+    #e6f0f7 40%,
+    #c8d9e6 70%,
+    #b0c4d6 90%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
+
+.container-navbar{
+    position: fixed;
+    height: 6rem;
+    background-color: rgba(000, 000, 000, 0.3);
+    margin: 0 auto;
+    width: 100vw;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99;
+}
+
+.container-navbar .logo-empresa{
+    width: 7rem;
+    height: auto;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    left: 50px;
+    top: 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.container-navbar .logo-empresa:hover{
+    transform: scale(1.05);
+}
+
+.nav-bar{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-nav-bar{
+    color: rgb(255, 255, 255);
+    font-size: 21px;
+    font-weight: 400;
+    padding: 0.2rem;
+    position: relative;
+    margin: 0 3rem;
+}
+
+.btn-nav-bar::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.5s ease;
+}
+
+.btn-nav-bar:hover{
+    font-weight: 400;
+}
+
+
+.btn-nav-bar:hover::after{
+    width: 100%;
+
+}
+
+/*Inicio*/
+
+.inicio{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.container-images{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.inicio .container-images .slide{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+    object-fit: cover;
+    height: 100%;
+}
+
+.container-images .slide.on{
+    opacity: 1;
+    z-index: 1;
+}
+
+.inicio button{
+    width: 30px;
+    height: 30px;
+}
+
+#back-image, #next-image{
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    top: 50vh;
+}
+
+#back-image{
+    transform: rotate(-90deg);
+    left: 20px;
+}
+
+#next-image{
+    transform: rotate(+90deg);
+    right: 20px;
+}
+
+.container-conteudo-inicio{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    align-items: center;
+}
+
+.frase-empresa{
+    width: 100%;
+    background-color: rgba(000, 000, 000, 0.3);
+    border-radius: 15px;
+    padding: 0.5rem;
+    text-align: center;
+    z-index: 2;
+    margin-bottom: 1rem;
+}
+
+.frase-empresa h2{
+    font-size: 55px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.btn-orcamento-inicio{
+    background-color: #fff;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    color: #000000;
+    transition: all 0.5s ease;
+    margin: 0 auto;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+    z-index: 3;
+}
+
+.btn-orcamento-inicio:hover{
+    color: #FFF;
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+/*Pilares*/
+
+.pilares{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-pilares{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.resultados-texto{
+    color: #000;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.resultados-texto span{
+    color: #000768;
+    display: inline-block;
+    cursor: default;
+}
+
+.resultados-texto span:hover{
+    transform: scale(1.05);
+}
+
+.diferenciais{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    margin: auto;
+    height: auto;
+}
+
+.diferencial{
+    width: 315px;
+    height: 37vh;
+    border-radius: 10px;
+    margin: 0.5rem 2.5rem;
+    cursor: default;
+    text-align: center;
+    background-color: rgba(000, 000, 000, 0.3);
+    padding: 15px;
+}
+
+.diferencial:hover{
+    transform: translateY(-8px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.diferencial img{
+    width: 50px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.diferencial h2{
+    font-size: 23px;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 3px solid #000768;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.diferencial p{
+    text-align: center;
+    font-size: 18px;
+    padding: 0 10px;
+    padding: 1rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+/*Sobre nós*/
+
+.sobre-nos{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(/imagens/logo001.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sobre-nos h2{
+    color: #000;
+    font-size: 42px;
+    position: relative;
+    top: 0rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sobre-nos h2 span{
+    color: #000768;
+    display: inline-block;
+    cursor: default;
+}
+
+.sobre-nos h2 span:hover{
+    transform: scale(1.05);
+}
+
+.sobre-nos .container-sobre{
+    display:flex ;
+    align-items: center;
+}
+
+.sobre-nos .container-sobre .imagem img{
+    width: auto;
+    height: 50vh;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sobre-nos .container-sobre .imagem img:hover{
+    transform: scale(1.02);
+}
+
+
+.sobre-nos .container-sobre .sobre-text{
+    width: 30vw;
+    height: 65vh;
+    background-color: rgba(000, 000, 000, 0.5);
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.sobre-nos .container-sobre .sobre-text p{
+    color: #fff;
+    font-size: 19px;
+    text-align: justify;
+    font-weight: 400;
+    width: 100%;
+}
+
+.btn-saber-mais{
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    width: 16rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn-saber-mais:hover{
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(000, 000, 000, 0.1);
+    color: #fff;
+}
+
+/*Serviços*/
+.servicos{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.servicos h2{
+    color: #000000;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    cursor: default;
+}
+
+.servicos h2 span{
+    color: #000768;
+}
+
+.container-servicos{
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+    overflow: hidden;
+    border-radius: 20px;
+    box-sizing: 0 10px 20px rgba(0,0,0,0.2);
+    margin: 0 auto;
+}
+
+.images-servicos{
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    transition: flex 0.5s ease-in-out;
+    cursor: default;
+}
+
+.images-servicos img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%) contrast(90%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.images-servicos:hover{
+    flex: 3;
+}
+
+.images-servicos:hover img{
+    filter: none;
+}
+
+.text-servicos{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.images-servicos:hover .text-servicos{
+    opacity: 1;
+}
+
+.text-servicos h3{
+    font-size: 42px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.text-servicos p{
+    font-size: 21px;
+    font-weight: 400;
+}
+
+
+/*Footer*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(/imagens/le-trung-IOnX2aen4jY-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.solicitar-orcamento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.solicitar-orcamento .titulo-footer{
+    color: #fff;
+    font-weight: 300;
+    font-size: 36px;
+    padding-bottom: 50px;
+}
+
+.solicitar-orcamento .mensagem-footer{
+    color: #fff;
+    max-width: 800px;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.btn-novo{
+    padding: 10px 5px;
+    margin-top: 25px;
+}
+
+.btn-orcamento{
+    background-color: #fff;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    width: 14.5rem;
+    color: #000000;
+    transition: all 0.5s ease;
+    margin: 1rem auto 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 400;
+}
+
+.btn-orcamento:hover{
+    color: #FFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    transform: scale(1.03);
+}
+
+.container-footer{
+    width: 80%;
+}
+
+.contatos-footer{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-footer img{
+    width: 20rem;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.logo-footer img:hover{
+    background-color: #e2e2e2;
+}
+
+.trabalhe-conosco, .contatos, .logo-footer img{
+    width: 18rem;
+    height: 11rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.logo-footer img{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.trabalhe-conosco h4, .contatos h4{
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-top: 5px;
+}
+
+.trabalhe-conosco a{
+    color: #fff;
+    font-size: 18px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.trabalhe-conosco a:hover{
+    transform: scale(1.1);
+    color: #ddd;
+}
+
+.contatos{
+    margin: 3rem 0;
+}
+
+.contatos .links{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contatos .links .insta:hover{
+    background-color: rgb(179, 0, 0);
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+.contatos .links .face:hover{
+    background-color: rgb(0, 110, 253);
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+.contatos .links .what img:hover{
+    background-color: rgb(0, 216, 0);
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+
+.saber-mais:hover{
+    background-color: #ffffff;
+    color: #000;
+    font-weight: 500;
+    border: 1px solid rgba(000, 000, 000, 0.3);
+}
+
+.rodape-informacoes{
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsividade */
+
+@media (max-width: 1340px) {
+    .container-pilares{
+        height: 70vh;
+    }
+
+    .diferencial img{
+        display: none;
+    }
+
+    .sobre-nos .container-sobre .sobre-text p{
+    font-size: 15px;
+    }
+
+    .container-navbar .logo-empresa{
+    width: 5rem;
+    left: 5px;
+    top: 5px;
+    }
+
+    .diferencial{
+    height: 30vh;
+    margin: 1rem 1rem;
+    }
+
+    .diferencial h2{
+        padding: 0.5rem 0;
+        font-size: 20px;
+    }
+
+    .diferencial p{
+        padding: 0.5rem;
+        font-size: 17px;
+    }
+
+    .resultados-texto{
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .btn-nav-bar{
+        font-size: 18px;
+        margin: 0 1rem;
+    }
+
+    .frase-empresa h2{
+        font-size: 40px;
+    }
+
+    .sobre-nos .container-sobre .sobre-text{
+        width: 50vw;
+    }
+
+    .logo-footer{
+        display: none;
+    }
+
+    .rodape-informacoes{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .btn-orcamento-inicio{
+    font-size: 14px;
+    }
+
+    .container-navbar .logo-empresa{
+        top: 5px;
+        left: auto;
+        width: 3rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .btn-nav-bar{
+        margin: 0 0.5rem;
+    }
+
+    .container-conteudo-inicio{
+        width: 60vw;
+    }
+
+    .container-pilares{
+        height: 80vh;
+    }
+
+    .resultados-texto{
+        font-size: 27px;
+    }
+
+    .sobre-nos{
+        height: 100vh;
+    }
+
+    .sobre-nos .container-sobre .sobre-text{
+        width: 95vw;
+        height: 50vh;
+    }
+
+    .sobre-nos h2{
+        padding-bottom: 1rem;
+    }
+
+    .text-servicos{
+        background-color: rgba(000, 000, 000, 0.3);
+        padding: 5px;
+        border-radius: 3px;
+        left: 5px;
+    }
+
+    .text-servicos h3{
+    font-size: 17px;
+    }
+
+    .text-servicos p{
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .solicitar-orcamento .titulo-footer{
+    font-size: 28px;
+    padding-bottom: 20px;
+    }
+
+    .solicitar-orcamento .mensagem-footer{
+    line-height: 20px;
+    font-size: 15px;
+    }
+
+    .btn-orcamento{
+    padding: 0.5rem 1rem;
+    width: 11.5rem;
+    font-size: 14px;
+    }
+
+    .trabalhe-conosco, .contatos {
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .trabalhe-conosco h4, .contatos h4{
+    margin-bottom: 20px;
+    font-size: 16px;
+    }
+
+    .trabalhe-conosco a{
+    font-size: 14px;
+    }
+
+    .contatos .links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    }
+
+    .contatos .links .insta img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .contatos .links .insta{
+        width: 30px;
+        height: 30px;
+    }
+
+    .contatos .links .face img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .contatos .links .face{
+        width: 30px;
+        height: 30px;
+    }
+
+    .contatos .links .what img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .contatos .links .what{
+        width: 30px;
+        height: 30px;
+    }
+
+    .rodape-informacoes{
+        font-size: 12px;
+    }
+
+    .contatos{
+    margin: 1rem 0;
+    }
+
+    .frase-empresa h2{
+        font-size: 30px;
+    }
+
+    .btn-orcamento-inicio{
+        width: 12rem;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .container-navbar{
+    height: 5rem;
+    align-items: end;
+    justify-content: center;
+    }
+
+    .btn-nav-bar{
+        font-size: 14px;
+        margin: 2.5rem 0.2rem 0;
+    }
+
+    .sobre-nos h2{
+        font-size: 35px;
+        margin-bottom: 2rem;
+    }
+
+    .sobre-nos .container-sobre .sobre-text{
+    height: 65vh;
+    padding: 20px;
+    }
+
+    .container-pilares{
+        height: 90vh;
+    }
+
+    .diferenciais{
+        width: 95vw;
+    }
+
+    .diferencial{
+        height: 23vh;
+        margin: 0.5rem;
+    }
+
+    .diferencial h2{
+    font-size: 18px;
+    }
+
+    .diferencial p{
+        font-size: 13.5px;
+    }
+}
